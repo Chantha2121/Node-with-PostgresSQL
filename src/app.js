@@ -4,6 +4,7 @@ import apiRoutes from './routes/index.js';
 const app = express();
 
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {

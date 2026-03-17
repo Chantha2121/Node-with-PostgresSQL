@@ -10,6 +10,7 @@ const createContentTable = async () => {
         id SERIAL PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
         body TEXT NOT NULL,
+        image VARCHAR(255),
         author_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
         created_at TIMESTAMP DEFAULT NOW()
       )
